@@ -1,12 +1,13 @@
-/*
-background purple: #540B51
-background ivory: #F3EAE2
-button blue: #4285F4
-titles black: #191817
-paragraph black: #000000
-paragraph yellow: #ECB12F
-links blue: #2E71A6
-footer links grey: #454245
+/* Color Palette
+--------------------------
+Background Purple: #540B51
+Background Ivory: #F3EAE2
+Button Blue: #4285F4
+Titles Black: #191817
+Paragraph Black: #000000
+Paragraph Yellow: #ECB12F
+Links Blue: #2E71A6
+Footer Links Grey: #454245
 */
 
 * {
@@ -31,46 +32,24 @@ footer links grey: #454245
     list-style: none;
     display: flex;
     gap: 1.5rem;
+    flex-wrap: wrap;
   }
   
   a {
     text-decoration: none;
     color: inherit;
   }
-  
-  /* NAVBAR */
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background: #540B51;
-    color: white;
-    flex-wrap: wrap;
-  }
-  
-  nav > div {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-  }
-  
-  nav ul {
-    flex-wrap: wrap;
-  }
-  
-  nav button {
-    background: transparent;
-    border: none;
-    cursor: pointer;
-  }
-  
-  nav img {
+ 
+  nav img.logo {
     height: 30px;
+    width: auto;
   }
-
-  /* ----- MOBILE NAV STYLES ----- */
-.mobile-nav {
+  
+  
+  /* -------------------
+    Mobile Navigation
+  -------------------- */
+  .mobile-nav {
     background-color: #540B51;
     color: white;
     padding: 1rem 2rem;
@@ -85,7 +64,7 @@ footer links grey: #454245
     align-items: center;
   }
   
-  .mobile-nav .logo {
+  .mobile-nav . {
     height: 30px;
   }
   
@@ -104,30 +83,36 @@ footer links grey: #454245
     margin-top: 1rem;
   }
   
+  .mobile-nav ul {
+    flex-direction: column;
+  }
   .mobile-nav .nav-menu a {
     color: white;
     font-weight: bold;
   }
   
-  /* This hides the menu until it's toggled via JS */
   .mobile-nav .nav-menu[hidden] {
     display: none;
   }
+
+  .mobile-nav .mobile-actions {
+    display: flex;
+    flex-direction: row;
+  }
   
-  
-  
-  /* HEADER */
+  /* -------------------
+    Header
+  -------------------- */
   header {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
     padding: 3rem 2rem;
     background: #540B51;
+    text-align: center;
   }
   
   header > div {
-    flex: 1 1 300px;
     padding: 1rem;
   }
   
@@ -139,32 +124,33 @@ footer links grey: #454245
   
   header p {
     font-size: 1.2rem;
-    color:white;
+    color: white;
     margin-bottom: 2rem;
   }
   
   header button {
     padding: 0.8rem 1.2rem;
-    margin-right: 1rem;
+    margin: 0.5rem auto;
     border: none;
     border-radius: 4px;
     background-color: white;
-    color: 540B51;
-    font-weight: bold;
-    cursor: pointer;
+    color: #540B51;
     font-weight: bold;
     cursor: pointer;
     text-transform: uppercase;
     letter-spacing: 1px;
+    display: block;
+    width: 100%;
   }
   
   header button img {
-    height: 20px; 
+    height: 20px;
     width: auto;
-    display: space-around;
   }
   
-  /* MAIN SECTION */
+  /* -------------------
+    Main Content
+  -------------------- */
   main {
     padding: 3rem 2rem;
   }
@@ -177,15 +163,16 @@ footer links grey: #454245
   main h3 {
     font-size: 1.8rem;
     margin-bottom: 1rem;
+    color: #191817;
   }
   
   main p {
     max-width: 800px;
-    margin: 0 auto 2rem auto;
+    margin: 0 auto 2rem;
+    color: #000000;
   }
   
   main ul {
-    flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
   }
@@ -196,8 +183,10 @@ footer links grey: #454245
     color: #611f69;
   }
   
-  /* BUTTON GROUP */
-  section button {
+  /* -------------------
+    Section Buttons
+  -------------------- */
+  /* section button {
     margin: 0.5rem;
     padding: 0.8rem 1.5rem;
     background-color: #611f69;
@@ -206,17 +195,85 @@ footer links grey: #454245
     border-radius: 4px;
     font-weight: bold;
     cursor: pointer;
+  } */
+  button {
+    display: flex;                
+    align-items: center;         
+    justify-content: center;      
+    gap: 10px;                    
+    padding: 0.8rem 1.2rem;       
+    border: none;                 
+    color: white;
+    background-color: white;                 
+    border-radius: 4px;           
+    font-weight: bold;            
+    cursor: pointer;             
+  }
+
+  button img {
+    height: 20px;  
+    width: auto;   
+  }
+
+  button span {
+    text-align: center;  
+  }
+
+
+
+  button.google {
+    display: flex;                
+    align-items: center;          
+    justify-content: center;      
+    background-color: #4285F4;    
+    color: white;                 
+    padding: 8px 16px;            
+    border: none;                 
+    border-radius: 4px;           
+    cursor: pointer;             
+  }
+
+  button.google img.logo-google {
+    height: 35px;                 
+    width: auto;                  
+    border-radius: 2px;           
+    padding: 4px;                
+    background-color: white;      
+    margin-right: 12px;           
+  }
+
+  button.google span {
+    text-align: center;           
+    flex-grow: 1;
+  }
+ 
+ 
+
+  
+
+  /* Style for the search button */
+  button.search-icon {
+    background: transparent;  
+    border: none;            
+    padding: 0;               
+    cursor: pointer;        
   }
   
-  /* FOOTER */
+  button.search-icon img {
+    width: 20px;   
+    height: 20px;  
+  }
+  
+  /* -------------------
+    Footer
+  -------------------- */
   footer {
-    background: #f4ede4;
+    background: #f3eae2;
     padding: 2rem;
     text-align: center;
   }
   
   footer ul {
-    flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
     margin-bottom: 1rem;
@@ -239,77 +296,58 @@ footer links grey: #454245
     color: #555;
   }
   
-
-
-
-/* ----- BASE NAV STYLES ----- */
-
-/* Hide desktop nav by default on mobile */
-nav:not(.mobile-nav) {
+  /* -------------------
+    Default Nav (Hidden)
+  -------------------- */
+  nav:not(.mobile-nav) {
     display: none;
   }
   
-  /* Show mobile nav by default */
-  .mobile-nav {
-    display: block;
-  }
-
-/* Hide mobile nav on desktop */
+  /* -------------------
+    Media Queries
+  -------------------- */
   @media (min-width: 768px) {
+    /* Show desktop nav */
     .mobile-nav {
       display: none;
     }
+  
     nav:not(.mobile-nav) {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1rem 2rem;
-        background-color: #540B51;
-        color: white;
-      }
-    
-      nav:not(.mobile-nav) ul {
-        display: flex;
-        gap: 1rem;
-        list-style: none;
-      }
-    
-      nav:not(.mobile-nav) a {
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-      }
-    
-      nav:not(.mobile-nav) img {
-        height: 30px;
-      }
-      
-  /* Hide mobile nav */
-  .mobile-nav {
-    display: none;
-  }
-  }
-
-  @media (max-width: 768px) {
-    nav ul {
-      flex-direction: column;
-      gap: 0.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #540B51;
+      color: white;
+      flex-wrap: wrap;
+    }
+  
+    nav:not(.mobile-nav) ul {
+      gap: 1rem;
+    }
+  
+    nav:not(.mobile-nav) a {
+      color: white;
+      font-weight: bold;
+    }
+  
+    nav:not(.mobile-nav) img {
+      height: 30px;
     }
   
     header {
-      flex-direction: column;
-      text-align: center;
+      flex-direction: row;
+      text-align: left;
     }
   
     header button {
-      display: block;
-      width:100%;
-      margin: 0.5rem auto;
+      display: inline-block;
+      width: auto;
+      margin-right: 1rem;
     }
   
     main ul {
-      flex-direction: column;
-      align-items: center;
+      flex-direction: row;
     }
   }
   

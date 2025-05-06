@@ -19,27 +19,32 @@
 <body>
   
   <!-- MOBILE NAVBAR -->
-  <nav class="mobile-nav">
-    <div class="nav-header">
-      <img src="./images/slack-logo.png" alt="Slack logo" class="logo" />
+<nav class="mobile-nav">
+  <div class="nav-header">
+    <img src="./images/slack-logo.png" alt="Slack logo" class="logo" />
+    <div class="mobile-actions">
+      <button class="search-icon">
+        <img src="./images/icon-search.png" alt="Search icon">
+      </button>
       <button class="hamburger" onclick="toggleMenu()">☰</button>
     </div>
-  
-    <div class="nav-menu" hidden>
-      <ul>
-        <li><a href="#">Product</a></li>
-        <li><a href="#">Solutions</a></li>
-        <li><a href="#">Resources</a></li>
-        <li><a href="#">Pricing</a></li>
-      </ul>
-  
-      <ul>
-        <li><a href="#">Sign in</a></li>
-        <li><a href="#">Try for free</a></li>
-      </ul>
-    </div>
-  </nav>  
-  
+  </div>
+
+  <div class="nav-menu" hidden>
+    <ul>
+      <li><a href="#">Product</a></li>
+      <li><a href="#">Solutions</a></li>
+      <li><a href="#">Resources</a></li>
+      <li><a href="#">Pricing</a></li>
+    </ul>
+
+    <ul>
+      <li><a href="#">Sign in</a></li>
+      <li><a href="#">Try for free</a></li>
+    </ul>
+  </div>
+</nav>
+
 
 <!-- NAVBAR -->
   <nav>
@@ -93,8 +98,8 @@
       <div>
         <button>Sign up with email</button>
 
-        <button>
-          <img src="./images/logo-google.png" alt="Google logo" />
+        <button class="google">
+          <img class="logo-google" src="./images/logo-google.png" alt="Google logo" />
           <span>Sign up with Google</span>
         </button>
       </div>
